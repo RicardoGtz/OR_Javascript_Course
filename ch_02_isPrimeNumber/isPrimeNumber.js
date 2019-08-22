@@ -9,10 +9,26 @@ function isPrime(num){
     while((num%divider)!=0)
         divider++;
     if(divider==num)
-        console.log(num+" is a prime number");
+        return true;
     else
-        console.log(num+" is nota prime number, is divided by "+divider);
-
+        return false;
 }
 
-isPrime(num);
+for(var i=2;i<num;i++){
+    if(isPrime(i))
+        console.log(i+" is a prime number");
+}
+
+birthDate=new Date(1997,4,12);
+console.log(birthDate.getDay());
+
+var initTime=Date.now();
+//Calculate how much time it takes to execute this
+var sum=0;
+for(i =0;i<100000;i++){
+    sum+=i;
+}
+var endTime=Date.now();
+console.log(endTime);
+var difTime=endTime-initTime;
+console.log(difTime);
